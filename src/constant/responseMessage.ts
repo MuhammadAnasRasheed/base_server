@@ -13,5 +13,13 @@ export default {
         USER_NOT_EXIST: `Account does not exist`,
         INVALID_EMAIL_OR_PASSWORD: `Invalid email or password`,
         LOGIN_SUCCESSFUL: `Login successful`
+    },
+
+    todomessage:{
+        Add:`Successfully Add in Todo list`,
+        Get:`Your all Todo List`,
+        notfound:`Selected Todo not found`,
+        deletemsg:`Todo deleted successfully`,
+        updatemsg:`Todo updated successfully`
     }
 }

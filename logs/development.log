@@ -13305,3 +13305,351 @@
         }
     }
 }
+{
+    "level": "INFO",
+    "timestamp": "2026-03-01T22:39:20.838Z",
+    "message": "Database connection established",
+    "meta": {
+        "CONNECTION_NAME": "test"
+    }
+}
+{
+    "level": "INFO",
+    "timestamp": "2026-03-01T22:39:20.847Z",
+    "message": "Rate limiter initiated",
+    "meta": {}
+}
+{
+    "level": "INFO",
+    "timestamp": "2026-03-01T22:39:20.848Z",
+    "message": "Application started on port 3000",
+    "meta": {
+        "SERVER_URL": "http://localhost:3000"
+    }
+}
+{
+    "level": "ERROR",
+    "timestamp": "2026-03-01T22:39:34.802Z",
+    "message": "Controller Response",
+    "meta": {
+        "success": false,
+        "statusCode": 404,
+        "request": {
+            "ip": "::1",
+            "method": "GET",
+            "url": "/favicon.ico"
+        },
+        "message": "Route is not found",
+        "data": null,
+        "trace": {
+            "error": "Error: Route is not found\n    at exports.default (C:\\Users\\NLN\\Desktop\\baseserverfork\\base_server\\src\\handlers\\notFound.ts:7:15)\n    at Layer.handle [as handle_request] (C:\\Users\\NLN\\Desktop\\baseserverfork\\base_server\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at trim_prefix (C:\\Users\\NLN\\Desktop\\baseserverfork\\base_server\\node_modules\\express\\lib\\router\\index.js:328:13)\n    at C:\\Users\\NLN\\Desktop\\baseserverfork\\base_server\\node_modules\\express\\lib\\router\\index.js:286:9\n    at router.process_params (C:\\Users\\NLN\\Desktop\\baseserverfork\\base_server\\node_modules\\express\\lib\\router\\index.js:346:12)\n    at next (C:\\Users\\NLN\\Desktop\\baseserverfork\\base_server\\node_modules\\express\\lib\\router\\index.js:280:10)\n    at SendStream.error (C:\\Users\\NLN\\Desktop\\baseserverfork\\base_server\\node_modules\\serve-static\\index.js:121:7)\n    at SendStream.emit (node:events:508:28)\n    at SendStream.emit (node:domain:489:12)\n    at SendStream.error (C:\\Users\\NLN\\Desktop\\baseserverfork\\base_server\\node_modules\\send\\index.js:270:17)"
+        }
+    }
+}
+{
+    "level": "INFO",
+    "timestamp": "2026-03-01T22:54:28.138Z",
+    "message": "Database connection established",
+    "meta": {
+        "CONNECTION_NAME": "test"
+    }
+}
+{
+    "level": "INFO",
+    "timestamp": "2026-03-01T22:54:28.145Z",
+    "message": "Rate limiter initiated",
+    "meta": {}
+}
+{
+    "level": "INFO",
+    "timestamp": "2026-03-01T22:54:28.147Z",
+    "message": "Application started on port 3000",
+    "meta": {
+        "SERVER_URL": "http://localhost:3000"
+    }
+}
+{
+    "level": "INFO",
+    "timestamp": "2026-03-01T22:55:40.111Z",
+    "message": "Controller Response",
+    "meta": {
+        "success": true,
+        "statusCode": 200,
+        "request": {
+            "ip": "::1",
+            "method": "POST",
+            "url": "/v1/login"
+        },
+        "message": "Login successful",
+        "data": {
+            "success": true,
+            "user": {
+                "_id": "699ebff85bec046cbc2b3e75",
+                "password": "$2b$10$6/LXYHEI.EgiR86JlrMpSutEKqdl5x7hl88hLTp9SMKrkg4GT7nJC",
+                "lastLoginAt": "2026-03-01T22:55:39.869Z",
+                "updatedAt": "2026-03-01T22:55:39.888Z"
+            },
+            "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTllYmZmODViZWMwNDZjYmMyYjNlNzUiLCJpYXQiOjE3NzI0MDU3MzksImV4cCI6MTc3MjQwOTMzOX0.-Uh7EY96HqGWj_XIypjaxWp3sISvBaOsaQYrcsx367w",
+            "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTllYmZmODViZWMwNDZjYmMyYjNlNzUiLCJpYXQiOjE3NzI0MDU3MzksImV4cCI6MTgwMzk0MTczOX0.HTAfu5l-8fTshcwn2JTqJzKS4vklBW9hhpKl5V9_2Ac"
+        }
+    }
+}
+{
+    "level": "INFO",
+    "timestamp": "2026-03-01T22:56:48.208Z",
+    "message": "Controller Response",
+    "meta": {
+        "success": true,
+        "statusCode": 201,
+        "request": {
+            "ip": "::1",
+            "method": "POST",
+            "url": "/v1/create"
+        },
+        "message": "Successfully Add in Todo list",
+        "data": {
+            "title": "task 2",
+            "description": "EFGH",
+            "userId": "699ebff85bec046cbc2b3e75",
+            "_id": "69a4c430f006a0b0991c34f4",
+            "createdAt": "2026-03-01T22:56:48.091Z",
+            "updatedAt": "2026-03-01T22:56:48.091Z",
+            "__v": 0
+        }
+    }
+}
+{
+    "level": "INFO",
+    "timestamp": "2026-03-01T22:57:07.762Z",
+    "message": "Controller Response",
+    "meta": {
+        "success": true,
+        "statusCode": 201,
+        "request": {
+            "ip": "::1",
+            "method": "GET",
+            "url": "/v1/get"
+        },
+        "message": "Your all Todo List",
+        "data": [
+            {
+                "_id": "699f57d767f5a81de8c7998b",
+                "title": "reactwork",
+                "description": "Do some work on react",
+                "userId": "699ebff85bec046cbc2b3e75",
+                "createdAt": "2026-02-25T20:13:11.896Z",
+                "updatedAt": "2026-02-26T09:28:55.412Z",
+                "__v": 0
+            },
+            {
+                "_id": "69a0065977c6fae11a653b94",
+                "title": "javascript work",
+                "description": "Do some work on javascript",
+                "userId": "699ebff85bec046cbc2b3e75",
+                "createdAt": "2026-02-26T08:37:45.548Z",
+                "updatedAt": "2026-02-26T08:37:45.548Z",
+                "__v": 0
+            },
+            {
+                "_id": "69a4c430f006a0b0991c34f4",
+                "title": "task 2",
+                "description": "EFGH",
+                "userId": "699ebff85bec046cbc2b3e75",
+                "createdAt": "2026-03-01T22:56:48.091Z",
+                "updatedAt": "2026-03-01T22:56:48.091Z",
+                "__v": 0
+            }
+        ]
+    }
+}
+{
+    "level": "INFO",
+    "timestamp": "2026-03-01T22:57:56.239Z",
+    "message": "Controller Response",
+    "meta": {
+        "success": true,
+        "statusCode": 201,
+        "request": {
+            "ip": "::1",
+            "method": "DELETE",
+            "url": "/v1/delete/699f57d767f5a81de8c7998b"
+        },
+        "message": "Todo deleted successfully",
+        "data": {
+            "_id": "699f57d767f5a81de8c7998b",
+            "title": "reactwork",
+            "description": "Do some work on react",
+            "userId": "699ebff85bec046cbc2b3e75",
+            "createdAt": "2026-02-25T20:13:11.896Z",
+            "updatedAt": "2026-02-26T09:28:55.412Z",
+            "__v": 0
+        }
+    }
+}
+{
+    "level": "INFO",
+    "timestamp": "2026-03-01T22:58:13.436Z",
+    "message": "Controller Response",
+    "meta": {
+        "success": true,
+        "statusCode": 201,
+        "request": {
+            "ip": "::1",
+            "method": "GET",
+            "url": "/v1/get"
+        },
+        "message": "Your all Todo List",
+        "data": [
+            {
+                "_id": "69a0065977c6fae11a653b94",
+                "title": "javascript work",
+                "description": "Do some work on javascript",
+                "userId": "699ebff85bec046cbc2b3e75",
+                "createdAt": "2026-02-26T08:37:45.548Z",
+                "updatedAt": "2026-02-26T08:37:45.548Z",
+                "__v": 0
+            },
+            {
+                "_id": "69a4c430f006a0b0991c34f4",
+                "title": "task 2",
+                "description": "EFGH",
+                "userId": "699ebff85bec046cbc2b3e75",
+                "createdAt": "2026-03-01T22:56:48.091Z",
+                "updatedAt": "2026-03-01T22:56:48.091Z",
+                "__v": 0
+            }
+        ]
+    }
+}
+{
+    "level": "ERROR",
+    "timestamp": "2026-03-01T22:58:58.169Z",
+    "message": "Controller Response",
+    "meta": {
+        "success": false,
+        "statusCode": 404,
+        "request": {
+            "ip": "::1",
+            "method": "POST",
+            "url": "/v1/update/"
+        },
+        "message": "Route is not found",
+        "data": null,
+        "trace": {
+            "error": "Error: Route is not found\n    at exports.default (C:\\Users\\NLN\\Desktop\\baseserverfork\\base_server\\src\\handlers\\notFound.ts:7:15)\n    at Layer.handle [as handle_request] (C:\\Users\\NLN\\Desktop\\baseserverfork\\base_server\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at trim_prefix (C:\\Users\\NLN\\Desktop\\baseserverfork\\base_server\\node_modules\\express\\lib\\router\\index.js:328:13)\n    at C:\\Users\\NLN\\Desktop\\baseserverfork\\base_server\\node_modules\\express\\lib\\router\\index.js:286:9\n    at router.process_params (C:\\Users\\NLN\\Desktop\\baseserverfork\\base_server\\node_modules\\express\\lib\\router\\index.js:346:12)\n    at next (C:\\Users\\NLN\\Desktop\\baseserverfork\\base_server\\node_modules\\express\\lib\\router\\index.js:280:10)\n    at C:\\Users\\NLN\\Desktop\\baseserverfork\\base_server\\node_modules\\express\\lib\\router\\index.js:646:15\n    at next (C:\\Users\\NLN\\Desktop\\baseserverfork\\base_server\\node_modules\\express\\lib\\router\\index.js:265:14)\n    at router.handle (C:\\Users\\NLN\\Desktop\\baseserverfork\\base_server\\node_modules\\express\\lib\\router\\index.js:175:3)\n    at router (C:\\Users\\NLN\\Desktop\\baseserverfork\\base_server\\node_modules\\express\\lib\\router\\index.js:47:12)"
+        }
+    }
+}
+{
+    "level": "ERROR",
+    "timestamp": "2026-03-01T22:59:24.626Z",
+    "message": "Controller Response",
+    "meta": {
+        "success": false,
+        "statusCode": 404,
+        "request": {
+            "ip": "::1",
+            "method": "POST",
+            "url": "/v1/update/69a4c430f006a0b0991c34f4"
+        },
+        "message": "Route is not found",
+        "data": null,
+        "trace": {
+            "error": "Error: Route is not found\n    at exports.default (C:\\Users\\NLN\\Desktop\\baseserverfork\\base_server\\src\\handlers\\notFound.ts:7:15)\n    at Layer.handle [as handle_request] (C:\\Users\\NLN\\Desktop\\baseserverfork\\base_server\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at trim_prefix (C:\\Users\\NLN\\Desktop\\baseserverfork\\base_server\\node_modules\\express\\lib\\router\\index.js:328:13)\n    at C:\\Users\\NLN\\Desktop\\baseserverfork\\base_server\\node_modules\\express\\lib\\router\\index.js:286:9\n    at router.process_params (C:\\Users\\NLN\\Desktop\\baseserverfork\\base_server\\node_modules\\express\\lib\\router\\index.js:346:12)\n    at next (C:\\Users\\NLN\\Desktop\\baseserverfork\\base_server\\node_modules\\express\\lib\\router\\index.js:280:10)\n    at C:\\Users\\NLN\\Desktop\\baseserverfork\\base_server\\node_modules\\express\\lib\\router\\index.js:646:15\n    at next (C:\\Users\\NLN\\Desktop\\baseserverfork\\base_server\\node_modules\\express\\lib\\router\\index.js:265:14)\n    at router.handle (C:\\Users\\NLN\\Desktop\\baseserverfork\\base_server\\node_modules\\express\\lib\\router\\index.js:175:3)\n    at router (C:\\Users\\NLN\\Desktop\\baseserverfork\\base_server\\node_modules\\express\\lib\\router\\index.js:47:12)"
+        }
+    }
+}
+{
+    "level": "INFO",
+    "timestamp": "2026-03-01T23:00:02.145Z",
+    "message": "Controller Response",
+    "meta": {
+        "success": true,
+        "statusCode": 200,
+        "request": {
+            "ip": "::1",
+            "method": "PATCH",
+            "url": "/v1/update/69a4c430f006a0b0991c34f4"
+        },
+        "message": "Todo updated successfully",
+        "data": {
+            "_id": "69a4c430f006a0b0991c34f4",
+            "title": "task1",
+            "description": "EFGH",
+            "userId": "699ebff85bec046cbc2b3e75",
+            "createdAt": "2026-03-01T22:56:48.091Z",
+            "updatedAt": "2026-03-01T23:00:02.040Z",
+            "__v": 0
+        }
+    }
+}
+{
+    "level": "INFO",
+    "timestamp": "2026-03-01T23:00:38.874Z",
+    "message": "Controller Response",
+    "meta": {
+        "success": true,
+        "statusCode": 201,
+        "request": {
+            "ip": "::1",
+            "method": "GET",
+            "url": "/v1/get"
+        },
+        "message": "Your all Todo List",
+        "data": [
+            {
+                "_id": "69a0065977c6fae11a653b94",
+                "title": "javascript work",
+                "description": "Do some work on javascript",
+                "userId": "699ebff85bec046cbc2b3e75",
+                "createdAt": "2026-02-26T08:37:45.548Z",
+                "updatedAt": "2026-02-26T08:37:45.548Z",
+                "__v": 0
+            },
+            {
+                "_id": "69a4c430f006a0b0991c34f4",
+                "title": "task1",
+                "description": "EFGH",
+                "userId": "699ebff85bec046cbc2b3e75",
+                "createdAt": "2026-03-01T22:56:48.091Z",
+                "updatedAt": "2026-03-01T23:00:02.040Z",
+                "__v": 0
+            }
+        ]
+    }
+}
+{
+    "level": "INFO",
+    "timestamp": "2026-03-01T23:00:47.860Z",
+    "message": "Controller Response",
+    "meta": {
+        "success": true,
+        "statusCode": 200,
+        "request": {
+            "ip": "::1",
+            "method": "PUT",
+            "url": "/v1/logout"
+        },
+        "message": "Operation is completed",
+        "data": null
+    }
+}
+{
+    "level": "ERROR",
+    "timestamp": "2026-03-01T23:00:55.620Z",
+    "message": "Controller Response",
+    "meta": {
+        "success": false,
+        "statusCode": 401,
+        "request": {
+            "ip": "::1",
+            "method": "GET",
+            "url": "/v1/get"
+        },
+        "message": "You are not allowed to perform this task",
+        "data": null,
+        "trace": {
+            "error": "Error: You are not allowed to perform this task\n    at C:\\Users\\NLN\\Desktop\\baseserverfork\\base_server\\src\\middlewares\\authenticate.ts:29:25\n    at Generator.next (<anonymous>)\n    at C:\\Users\\NLN\\Desktop\\baseserverfork\\base_server\\src\\middlewares\\authenticate.ts:8:71\n    at new Promise (<anonymous>)\n    at __awaiter (C:\\Users\\NLN\\Desktop\\baseserverfork\\base_server\\src\\middlewares\\authenticate.ts:4:12)\n    at C:\\Users\\NLN\\Desktop\\baseserverfork\\base_server\\src\\middlewares\\authenticate.ts:10:97\n    at C:\\Users\\NLN\\Desktop\\baseserverfork\\base_server\\src\\handlers\\async.ts:5:25\n    at Layer.handle [as handle_request] (C:\\Users\\NLN\\Desktop\\baseserverfork\\base_server\\node_modules\\express\\lib\\router\\layer.js:95:5)\n    at next (C:\\Users\\NLN\\Desktop\\baseserverfork\\base_server\\node_modules\\express\\lib\\router\\route.js:149:13)\n    at Route.dispatch (C:\\Users\\NLN\\Desktop\\baseserverfork\\base_server\\node_modules\\express\\lib\\router\\route.js:119:3)"
+        }
+    }
+}

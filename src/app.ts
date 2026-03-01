@@ -1,4 +1,4 @@
-import express, { Application } from 'express'
+import express, { Application,Request,Response } from 'express'
 import path from 'path'
 import router from './APIs'
 import errorHandler from './middlewares/errorHandler'
@@ -21,6 +21,15 @@ app.use(
 )
 app.use(express.json())
 app.use(express.static(path.join(__dirname, '../', 'public')))
+
+app.get('/', (_req: Request, res: Response) => {
+    res.status(200).json({
+        success: true,
+        message: 'Server is running',
+        timestamp: new Date().toISOString()
+    })
+})
+
 
 //Router
 // app.use('/v1', router)
