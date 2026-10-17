@@ -8,9 +8,9 @@ export default {
     findUserById: (id: string) => {
         return userModel.findById(id)
     },
-    findUserByConfirmationTokenAndCode: (token: string, code: string) => {
+    findUserByConfirmationTokenAndCode: (code: string) => {
         return userModel.findOne({
-            'accountConfimation.token': token,
+            //'accountConfimation.token': token,
             'accountConfimation.code': code
         })
     },

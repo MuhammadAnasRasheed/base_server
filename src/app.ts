@@ -1,4 +1,4 @@
-import express, { Application,Request,Response } from 'express'
+import express, { Application, Request, Response } from 'express'
 import path from 'path'
 import router from './APIs'
 import errorHandler from './middlewares/errorHandler'
@@ -15,7 +15,7 @@ app.use(cookieParser())
 app.use(
     cors({
         methods: ['GET', 'POST', 'DELETE', 'OPTIONS', 'HEAD', 'PUT', 'PATCH'],
-        origin: ['https://xyz.com'],
+        origin: ['http://localhost:3000'],
         credentials: true
     })
 )

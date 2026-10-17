@@ -17,7 +17,6 @@ import jwt from '../../../utils/jwt'
 import config from '../../../config/config'
 import { IToken } from '../_shared/types/token.interface'
 import tokenRepository from '../_shared/repo/token.repository'
-
 dayjs.extend(utc)
 
 export const registrationService = async (payload: IRegisterRequest) => {
@@ -75,10 +74,18 @@ export const registrationService = async (payload: IRegisterRequest) => {
     const newUser = await query.createUser(userObj)
 
     //Sending confimation emails
-    const confimationURL = `Frontendhost/confimation/${token}?code=${OTP}`
+    // const confimationURL = `Frontendhost/confimation/${token}?code=${OTP}`
     const to = [email]
     const subject = `Confirm your account`
-    const text = `Hey ${name}, Please confirm your account by clicking the link belown\n\n${confimationURL}`
+    // const text = `Hey ${name}, Please confirm your account by clicking the link belown\n\n${confimationURL}`
+
+    const text = `Hey ${name},
+
+                  Your email verification code is: ${OTP}
+
+                  Please enter this code in the application to confirm your account.
+
+                  If you did not create this account, please ignore this email.`
 
     emailService.sendEmail(to, subject, text).catch((error) => {
         logger.error('Error sending email', {
@@ -93,8 +100,8 @@ export const registrationService = async (payload: IRegisterRequest) => {
     }
 }
 
-export const accountConfirmationService = async (token: string, code: string) => {
-    const user = await query.findUserByConfirmationTokenAndCode(token, code)
+export const accountConfirmationService = async (code: string) => {
+    const user = await query.findUserByConfirmationTokenAndCode(code)
     if (!user) {
         throw new CustomError(responseMessage.auth.USER_NOT_EXIST, 404)
     }
@@ -132,9 +139,13 @@ export const loginService = async (payload: ILoginRequest) => {
     const { email, password } = payload
 
     //Check if the user is registered
-    const user = await query.findUserByEmail(email, 'password')
+    const user = await query.findUserByEmail(email, '+password accountConfimation')
     if (!user) {
         throw new CustomError(responseMessage.NOT_FOUND('User'), 404)
+    }
+
+    if (!user.accountConfimation.status) {
+        throw new CustomError("Please verify your account first", 403)
     }
 
     //Validate password

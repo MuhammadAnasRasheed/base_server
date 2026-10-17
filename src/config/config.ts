@@ -12,7 +12,14 @@ export default {
     DATABASE_URL: process.env.DATABASE_URL,
 
     //Email
-    EMAIL_API_KEY: process.env.EMAIL_SERVICE_API_KEY,
+    // EMAIL_API_KEY: process.env.EMAIL_SERVICE_API_KEY,
+
+    SMTP_HOST:process.env.SMTP_HOST,
+    SMTP_PORT:process.env.SMTP_PORT,
+    SMTP_USER:process.env.SMTP_USER,
+    SMTP_PASS:process.env.SMTP_PASS,
+    SMTP_FROM:process.env.SMTP_FROM,
+
 
     //Tokens
     TOKENS: {

@@ -38,12 +38,12 @@ export default {
     }),
     confirmRegistration: asyncHandler(async (request: Request, response: Response, next: NextFunction) => {
         try {
-            const { params, query } = request as IConfirmRegistration
+            const { query } = request as IConfirmRegistration
 
-            const { token } = params
+            //const { token } = params
             const { code } = query
 
-            const user = await accountConfirmationService(token, code)
+            const user = await accountConfirmationService(code)
 
             httpResponse(response, request, 201, responseMessage.auth.USER_REGISTERED, user)
         } catch (error) {
@@ -110,7 +110,7 @@ export default {
             //Clearing cookies
             response
                 .clearCookie('accessToken', {
-                    path: '/v1',
+                    path: '/v1',                    
                     domain: DOMAIN,
                     sameSite: 'strict',
                     maxAge: 1000 * config.TOKENS.ACCESS.EXPIRY,
